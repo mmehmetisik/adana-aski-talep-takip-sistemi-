@@ -59,3 +59,90 @@ python3 --version
 sudo apt update
 sudo apt install python3.9 python3-pip python3-venv
 ```
+
+## Gerekli Kütüphanelerin Kurulumu
+
+Python kütüphaneleri, sistemin işlevselliğini sağlayan modüllerdir. Her kütüphanenin belirli bir görevi vardır ve eksik olması durumunda sistem çalışmayacaktır.
+
+**Sanal Ortam Oluşturma (Önerilen):**
+
+Sanal ortam kullanmak, projenin bağımlılıklarını sistem genelindeki Python kurulumundan izole eder. Bu yaklaşım, farklı projeler arasında versiyon çakışmalarını önler.
+
+```
+# Sanal ortam oluştur
+python -m venv talep_takip_env
+
+# Windows'ta aktifleştir
+talep_takip_env\Scripts\activate
+
+# Linux/Mac'te aktifleştir
+source talep_takip_env/bin/activate
+```
+
+**Kütüphanelerin Kurulumu:**
+
+Gerekli tüm kütüphaneleri tek komutla kurabilirsiniz. Her kütüphanenin işlevi şöyledir:
+
+- tkinter: Ana arayüz framework'ü (Python ile birlikte gelir)
+- openpyxl: Excel dosyası işlemleri için
+- hashlib: Şifre güvenliği için (Python ile birlikte gelir)
+- smtplib: Email gönderimi için (Python ile birlikte gelir)
+
+```
+pip install openpyxl==3.1.2
+
+```
+
+## Klasör Yapısının Oluşturulması
+
+Uygulamanın düzgün çalışması için belirli bir klasör yapısına ihtiyaç vardır. Bu yapı, verilerin organize edilmesini ve yönetilmesini kolaylaştırır.
+
+```
+talep_takip_sistemi/
+├── data/                    # Veri dosyaları
+│   ├── logs/               # Log dosyaları
+│   ├── backup/             # Yedekleme dosyaları
+│   └── email_templates/    # Email şablonları
+├── main.py                 # Ana program dosyası
+├── config.py               # Konfigürasyon dosyası
+├── database_manager.py     # Veritabanı yönetimi
+├── email_manager.py        # Email yönetimi
+├── excel_manager.py        # Excel işlemleri
+├── log.py                  # Loglama sistemi
+├── main_window.py          # Ana pencere
+└── password_screen.py      # Giriş ekranı
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
