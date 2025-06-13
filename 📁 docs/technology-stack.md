@@ -128,10 +128,10 @@ Email gönderimi için Python'un built-in SMTP kütüphanesi kullanılır.
 
 **Özellikler:**
 
-. TLS/SSL şifreleme desteği
-. HTML email gönderimi
-. Çoklu alıcı desteği
-. Ek dosya gönderimi (opsiyonel)
+- TLS/SSL şifreleme desteği
+- HTML email gönderimi
+- Çoklu alıcı desteği
+- Ek dosya gönderimi (opsiyonel)
 
 
 
