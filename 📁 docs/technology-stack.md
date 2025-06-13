@@ -197,7 +197,15 @@ Email iletişimi ve API bağlantıları için SSL/TLS şifreleme kullanılır.
 
 ### Geliştirme Araçları
 
+#### openpyxl
 
+Excel dosyası işlemleri için kullanılır.
+
+**Özellikler:**
+- .xlsx dosya okuma/yazma
+- Hücre formatlama
+- Grafik oluşturma
+- Formula desteği
 
 
 
