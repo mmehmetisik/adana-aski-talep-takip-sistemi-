@@ -49,6 +49,7 @@ Sadece görüntüleme yetkisine sahip kullanıcılar için tasarlanmış, Google
 [Kullanıcı Girişi] → [Ana Sistem] → [SQLite DB] → [Google Drive] → [Viewer App]
 
 ↓
+
 [Email Sistemi]
 
 ### İşlem Akışı:
