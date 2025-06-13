@@ -45,3 +45,73 @@ Sadece görüntüleme yetkisine sahip kullanıcılar için tasarlanmış, Google
 - Yerel cache yönetimi
 
 ## Veri Akışı
+
+[Kullanıcı Girişi] → [Ana Sistem] → [SQLite DB] → [Google Drive] → [Viewer App]
+↓
+[Email Sistemi]
+
+### İşlem Akışı:
+
+1. **Talep Oluşturma**
+   - Kullanıcı ana sistemde yeni talep oluşturur
+   - Veri SQLite veritabanına kaydedilir
+   - Email bildirimi ilgili kişilere gönderilir
+   - Veri Google Drive'a yüklenir
+
+2. **Veri Senkronizasyonu**
+   - Viewer uygulaması periyodik olarak Drive'ı kontrol eder
+   - Güncel veritabanı dosyası indirilir
+   - Yerel cache güncellenir
+   - Kullanıcı arayüzü yenilenir
+
+## Güvenlik Mimarisi
+
+### Kimlik Doğrulama
+- SHA-256 şifre hashleme
+- IP bazlı giriş deneme limiti
+- Oturum timeout mekanizması
+
+### Veri Güvenliği
+- Hassas bilgilerin şifrelenmesi
+- Google OAuth 2.0 güvenli bağlantı
+- SSL/TLS email iletişimi
+
+### Yetkilendirme
+- Rol tabanlı erişim kontrolü
+- İşlem bazlı yetki kontrolü
+- Audit log sistemi
+
+## Teknoloji Stack'i
+
+### Backend
+- **Python 3.x**: Ana programlama dili
+- **SQLite**: Yerel veritabanı
+- **Google Drive API**: Bulut depolama
+- **SMTP**: Email gönderimi
+
+### Frontend
+- **Tkinter**: Ana sistem UI
+- **CustomTkinter**: Modern UI bileşenleri
+- **HTML/CSS**: Email şablonları
+
+### Güvenlik
+- **OAuth 2.0**: Google kimlik doğrulama
+- **SHA-256**: Kriptografik hash
+- **SSL/TLS**: Güvenli iletişim
+
+## Ölçeklenebilirlik
+
+Sistem, modüler yapısı sayesinde kolayca genişletilebilir:
+
+- Yeni talep türleri eklenebilir
+- Farklı departmanlar için özelleştirilebilir
+- API katmanı eklenebilir
+- Web tabanlı arayüze geçiş yapılabilir
+
+## Performans Optimizasyonları
+
+- Veritabanı indeksleme
+- Lazy loading mekanizması
+- Cache yönetimi
+- Asenkron email gönderimi
+- Thread-safe log sistemi
