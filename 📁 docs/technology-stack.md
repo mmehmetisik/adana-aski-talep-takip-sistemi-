@@ -155,6 +155,7 @@ Modern ve responsive email şablonları için HTML5 ve CSS3 kullanılır.
 - Web-safe fontlar
 
 **Örnek Email Template Yapısı:**
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -170,7 +171,7 @@ Modern ve responsive email şablonları için HTML5 ve CSS3 kullanılır.
     </div>
 </body>
 </html>
-
+```
 
 
 
