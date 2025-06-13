@@ -87,7 +87,7 @@ CREATE TABLE guncellemeler (
     guncelleme_zamani TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (talep_no) REFERENCES talepler (talep_no)
 );
-
+```
 ## Bulut Teknolojileri
 
 ### Google Drive API
@@ -109,3 +109,37 @@ results = service.files().list(
     q=f"name='{DRIVE_FILE_NAME}'",
     fields="files(id, name, modifiedTime)"
 ).execute()
+```
+## OAuth 2.0
+Google kimlik doğrulama için endüstri standardı OAuth 2.0 protokolü kullanılır.
+
+**Güvenlik Akışı:**
+1. Kullanıcı Google hesabı ile giriş yapar
+2. Uygulama için izinleri onaylar
+3. Access token alınır
+4. Token güvenli şekilde saklanır
+5. API çağrılarında token kullanılır
+
+## Email Teknolojileri
+
+### SMTP Protocol
+
+Email gönderimi için Python'un built-in SMTP kütüphanesi kullanılır.
+
+**Özellikler:**
+
+. TLS/SSL şifreleme desteği
+. HTML email gönderimi
+. Çoklu alıcı desteği
+. Ek dosya gönderimi (opsiyonel)
+
+
+
+
+
+
+
+
+
+
+
