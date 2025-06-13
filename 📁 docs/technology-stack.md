@@ -87,3 +87,25 @@ CREATE TABLE guncellemeler (
     guncelleme_zamani TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (talep_no) REFERENCES talepler (talep_no)
 );
+
+## Bulut Teknolojileri
+
+### Google Drive API
+Viewer uygulaması için veri senkronizasyonu Google Drive üzerinden sağlanır.
+
+**Kullanılan API Özellikleri:**
+- Files.list() - Dosya listesi alma
+- Files.get() - Dosya metadata okuma
+- Files.get_media() - Dosya içeriği indirme
+- OAuth 2.0 kimlik doğrulama
+
+**Entegrasyon Detayları:**
+```python
+# API istemcisi oluşturma
+service = build('drive', 'v3', credentials=creds)
+
+# Dosya arama
+results = service.files().list(
+    q=f"name='{DRIVE_FILE_NAME}'",
+    fields="files(id, name, modifiedTime)"
+).execute()
