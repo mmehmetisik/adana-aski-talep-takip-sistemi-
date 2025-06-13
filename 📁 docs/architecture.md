@@ -47,6 +47,7 @@ Sadece görüntüleme yetkisine sahip kullanıcılar için tasarlanmış, Google
 ## Veri Akışı
 
 [Kullanıcı Girişi] → [Ana Sistem] → [SQLite DB] → [Google Drive] → [Viewer App]
+
 ↓
 [Email Sistemi]
 
