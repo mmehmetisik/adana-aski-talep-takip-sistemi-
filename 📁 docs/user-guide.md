@@ -206,5 +206,5 @@ Uygulama varsayılan olarak her 5 dakikada bir Google Drive'ı kontrol eder ve y
 
 Teknik sorunlar veya öneriler için:
 - Sistem Yöneticisi: IT Departmanı
-- Geliştirici: Burak Mete Öztürk
+- Geliştirici: Mehmet Işık
 - Birim: Ceyhan Atıksu Arıtma Tesisi
