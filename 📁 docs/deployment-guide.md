@@ -42,3 +42,20 @@ Python, sistemimizin temel yapı taşıdır. Doğru versiyonun kurulu olması ve
 2. İndirilen kurulum dosyasını çalıştırın. Kurulum ekranında mutlaka "Add Python to PATH" seçeneğini işaretleyin. Bu seçenek, Python'u komut satırından çalıştırabilmenizi sağlar.
 
 3. Kurulum tamamlandıktan sonra, komut istemcisini açın ve aşağıdaki komutu çalıştırarak kurulumu doğrulayın:
+
+python --version
+
+Bu komut, kurulu Python versiyonunu göstermelidir.
+
+**Linux İçin Python Kurulumu:**
+
+Çoğu Linux dağıtımında Python önceden kurulu gelir. Ancak versiyonu kontrol etmek ve gerekirse güncellemek önemlidir.
+
+```bash
+# Python versiyonunu kontrol et
+python3 --version
+
+# Eğer kurulu değilse veya eski versiyonsa
+sudo apt update
+sudo apt install python3.9 python3-pip python3-venv
+```
