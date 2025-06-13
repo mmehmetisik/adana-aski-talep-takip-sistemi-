@@ -88,6 +88,8 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
 </table>
 
 ## 🎥 Demo
+![proje](https://github.com/user-attachments/assets/ba34c781-a3a8-4bab-a12f-6fa106d4504b)
+
 
 <p align="center">
   <img src="demos/workflow-demo.gif" width="600" alt="İş Akışı Demosu"/>
