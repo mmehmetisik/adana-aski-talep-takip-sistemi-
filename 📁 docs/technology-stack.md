@@ -133,7 +133,16 @@ Email gönderimi için Python'un built-in SMTP kütüphanesi kullanılır.
 - Çoklu alıcı desteği
 - Ek dosya gönderimi (opsiyonel)
 
-
+**SMTP Konfigürasyonu:**
+```
+smtp_ayarlari = {
+    "sunucu": "smtp.gmail.com",
+    "port": 587,
+    "guvenlik": "TLS",
+    "kullanici_adi": "email@gmail.com",
+    "sifre": "app_password"
+}
+```
 
 
 
