@@ -172,8 +172,30 @@ Modern ve responsive email şablonları için HTML5 ve CSS3 kullanılır.
 </body>
 </html>
 ```
+## Güvenlik Teknolojileri
 
+### Hashlib - SHA-256
 
+Şifre güvenliği için SHA-256 hash algoritması kullanılır.
+
+```
+def sifre_hashle(self, sifre):
+    salt = "aski_2025_secure_"
+    sifre_salt = salt + sifre + salt
+    return hashlib.sha256(sifre_salt.encode('utf-8')).hexdigest()
+```
+
+### SSL/TLS
+
+Email iletişimi ve API bağlantıları için SSL/TLS şifreleme kullanılır.
+
+**Güvenlik Katmanları:**
+
+- SMTP üzerinde STARTTLS
+- HTTPS üzerinde API iletişimi
+- Sertifika doğrulama
+
+### Geliştirme Araçları
 
 
 
