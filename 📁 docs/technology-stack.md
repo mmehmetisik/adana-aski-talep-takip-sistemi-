@@ -144,6 +144,33 @@ smtp_ayarlari = {
 }
 ```
 
+## HTML/CSS Email Templates
+
+Modern ve responsive email şablonları için HTML5 ve CSS3 kullanılır.
+
+**Email Template Teknikleri:**
+- Inline CSS (email client uyumluluğu için)
+- Table-based layout (eski client desteği)
+- Media queries (mobil optimizasyon)
+- Web-safe fontlar
+
+**Örnek Email Template Yapısı:**
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Email içeriği -->
+    </div>
+</body>
+</html>
+
 
 
 
