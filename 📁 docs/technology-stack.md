@@ -207,6 +207,147 @@ Excel dosyası işlemleri için kullanılır.
 - Grafik oluşturma
 - Formula desteği
 
+**Kullanım Örneği:**
+```
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment
+
+# Workbook oluşturma
+wb = openpyxl.Workbook()
+ws = wb.active
+
+# Hücre formatlama
+cell = ws['A1']
+cell.font = Font(bold=True, color="FFFFFF")
+cell.fill = PatternFill(start_color="1E3A8A", fill_type="solid")
+```
+
+#### JSON
+
+Konfigürasyon ve veri alışverişi için JSON formatı kullanılır.
+
+**Kullanım Alanları:**
+- Kullanıcı verileri (users.json)
+- Email konfigürasyonu (email_config.json)
+- API response işleme
+
+#### Threading
+
+Asenkron işlemler için Python threading modülü kullanılır.
+
+**Kullanım Alanları:**
+
+- Email gönderimi (UI'ı dondurmadan)
+- Log yazma işlemleri
+- Periyodik güncelleme kontrolleri
+
+**Thread-Safe Log Örneği:**
+
+```
+import threading
+
+_logger_lock = threading.Lock()
+
+def log_yaz(mesaj):
+    with _logger_lock:
+        # Thread-safe log yazma
+        logger.info(mesaj)
+```
+
+### PyInstaller
+
+Executable dosya oluşturmak için PyInstaller kullanılır.
+
+**Build Konfigürasyonu:**
+
+```
+# .spec dosyası özellikleri
+a = Analysis(
+    ['main.py'],
+    pathex=[],
+    binaries=[],
+    datas=[('credentials.json', '.'), ('token.json', '.'), ('app.ico', '.')],
+    hiddenimports=['openpyxl.cell._writer'],
+    ...
+)
+
+exe = EXE(
+    ...
+    name='TalepTakipSistemi',
+    console=False,  # Konsol penceresi gösterme
+    icon=['app.ico']  # Özel uygulama ikonu
+)
+```
+
+## Sistem Gereksinimleri
+
+### Minimum Gereksinimler
+
+- İşletim Sistemi: Windows 7/Linux/macOS 10.12 veya üzeri
+- Python: 3.7 veya üzeri
+- RAM: 2 GB
+- Disk Alanı: 100 MB
+- Ekran Çözünürlüğü: 1366x768
+
+### Önerilen Gereksinimler
+
+- İşletim Sistemi: Windows 10/11
+- Python: 3.9 veya üzeri
+- RAM: 4 GB
+- Disk Alanı: 500 MB
+- Ekran Çözünürlüğü: 1920x1080
+- İnternet Bağlantısı: Email ve Drive sync için gerekli
+
+### Bağımlılıklar (Dependencies)
+
+```
+# requirements.txt
+tkinter (built-in)
+customtkinter==5.2.0
+openpyxl==3.1.2
+google-api-python-client==2.100.0
+google-auth-httplib2==0.1.1
+google-auth-oauthlib==1.1.0
+pillow==10.0.0
+```
+
+## Performans Optimizasyonları
+
+### Veritabanı Optimizasyonları
+
+-İndeksleme stratejisi
+- Prepared statements kullanımı
+- Connection pooling
+- Query optimization
+
+### Bellek Yönetimi
+
+- Lazy loading implementasyonu
+- Garbage collection optimizasyonu
+- Large dataset pagination
+- Resource cleanup
+
+### UI Performansı
+
+- Virtual scrolling
+- Debouncing for search
+- Progressive rendering
+- Animation frame limiting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
