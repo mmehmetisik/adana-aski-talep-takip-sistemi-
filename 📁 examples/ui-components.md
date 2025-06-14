@@ -120,7 +120,7 @@ kaydet_btn.pack(pady=10)
 ```
 ### Form Alanları
 
-### Modern Entry (Input) Alanı
+#### Modern Entry (Input) Alanı
 
 Focus efektleri ve placeholder desteği olan modern input alanı.
 
@@ -255,7 +255,7 @@ style.configure("TCombobox",
 ```
 ### Kart Tasarımları
 
-### Bilgi Kartı
+#### Bilgi Kartı
 
 Modern görünümlü bilgi kartı tasarımı.
 
@@ -334,7 +334,7 @@ bilgi_karti_olustur(
 ```
 
 ### Durum Göstergeleri
-### Renkli Durum Badge'i
+#### Renkli Durum Badge'i
 Talep durumlarını görsel olarak ifade eden badge bileşeni.
 
 ```
@@ -379,7 +379,7 @@ def durum_badge_olustur(parent, durum_text):
 ```
 
 ### Loading/Progress Göstergeleri
-### Animasyonlu Loading Ekranı
+#### Animasyonlu Loading Ekranı
 
 ```
 def loading_goster(parent, mesaj="Yükleniyor..."):
@@ -513,7 +513,7 @@ def modern_popup_goster(parent, baslik, icerik, tip="bilgi"):
 ```
 
 ### Tablo/Liste Görünümleri
-### Modern Treeview Stili
+#### Modern Treeview Stili
 
 ```
 def modern_treeview_olustur(parent):
@@ -570,7 +570,7 @@ def modern_treeview_olustur(parent):
     return tree
 ```
 ### Animasyon Örnekleri
-### Yumuşak Geçiş Animasyonu
+#### Yumuşak Geçiş Animasyonu
 
 ```
 def fade_in_animasyon(widget, adim=0.1):
@@ -590,7 +590,7 @@ def fade_in_animasyon(widget, adim=0.1):
     fade_step()
 ```
 
-### Logo Animasyonu
+#### Logo Animasyonu
 
 ```
 def logo_pulse_animasyon(logo_label):
@@ -652,9 +652,85 @@ def responsive_grid_olustur(parent, eleman_sayisi):
     pencere_boyut_degisti()
 ```
 
+### Özel Widget'lar
+#### Arama Kutusu
 
-
-
+```
+def arama_kutusu_olustur(parent, arama_callback):
+    """
+    Anlık arama özellikli modern arama kutusu.
+    """
+    # Arama container
+    arama_frame = tk.Frame(parent, bg="#f8fafc", relief=tk.FLAT)
+    arama_frame.pack(fill=tk.X, pady=10)
+    
+    # İç frame
+    ic_frame = tk.Frame(arama_frame, bg="white", relief=tk.FLAT, bd=1)
+    ic_frame.pack(fill=tk.X, padx=20, pady=10)
+    
+    # Arama ikonu
+    tk.Label(
+        ic_frame,
+        text="🔍",
+        font=("Segoe UI", 14),
+        bg="white"
+    ).pack(side=tk.LEFT, padx=(10, 5))
+    
+    # Arama entry
+    arama_var = tk.StringVar()
+    arama_entry = tk.Entry(
+        ic_frame,
+        textvariable=arama_var,
+        font=("Segoe UI", 11),
+        bg="white",
+        fg="#1e293b",
+        relief=tk.FLAT,
+        bd=0
+    )
+    arama_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=5, pady=8)
+    
+    # Placeholder
+    placeholder_text = "Ara..."
+    arama_entry.insert(0, placeholder_text)
+    arama_entry.config(fg="#94a3b8")
+    
+    def on_focus_in(e):
+        if arama_entry.get() == placeholder_text:
+            arama_entry.delete(0, tk.END)
+            arama_entry.config(fg="#1e293b")
+    
+    def on_focus_out(e):
+        if not arama_entry.get():
+            arama_entry.insert(0, placeholder_text)
+            arama_entry.config(fg="#94a3b8")
+    
+    arama_entry.bind("<FocusIn>", on_focus_in)
+    arama_entry.bind("<FocusOut>", on_focus_out)
+    
+    # Temizle butonu
+    temizle_btn = tk.Button(
+        ic_frame,
+        text="✕",
+        font=("Segoe UI", 10),
+        bg="white",
+        fg="#94a3b8",
+        relief=tk.FLAT,
+        bd=0,
+        cursor="hand2",
+        command=lambda: [arama_var.set(""), arama_callback("")]
+    )
+    temizle_btn.pack(side=tk.RIGHT, padx=(5, 10))
+    
+    # Anlık arama
+    def arama_degisti(*args):
+        arama_metni = arama_var.get()
+        if arama_metni != placeholder_text:
+            arama_callback(arama_metni)
+    
+    arama_var.trace("w", arama_degisti)
+    
+    return arama_frame
+```
 
 
 
