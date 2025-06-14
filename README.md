@@ -146,6 +146,14 @@ Sistem, her talep oluşturulduğunda ve güncellendiğinde otomatik olarak ilgil
 - Gradient efektler ve animasyonlar
 - Kullanıcı dostu form elemanları
 
+🛠️ Kullanılan Teknolojiler
+
+Python 3.x - Ana programlama dili
+Tkinter & CustomTkinter - Kullanıcı arayüzü
+SQLite - Veritabanı
+Google Drive API - Bulut entegrasyonu
+SMTP - Email gönderimi
+
 ## 👥 Geliştirici
 
 **Mehmet IŞIK**  
@@ -153,7 +161,7 @@ ADANA ASKİ - Yazılım Geliştirici
 
 ## 📄 Lisans
 
-Bu proje ADANA ASKİ'ye aittir. Tüm hakları saklıdır.
+Bu proje Mehmet IŞIK'a aittir. Tüm hakları saklıdır.
 
 ---
 
