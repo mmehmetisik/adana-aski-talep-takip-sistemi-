@@ -80,6 +80,8 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
 
 ### Ana Yönetim Sistemi
 
+![Ekran görüntüsü 2025-06-13 131727](https://github.com/user-attachments/assets/68b643f8-b79f-4798-b6ad-a64ac3d81d3f)
+
 
 <table>
   <tr>
