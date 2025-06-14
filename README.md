@@ -80,36 +80,32 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
 
 ### Ana Yönetim Sistemi
 
-![Ekran görüntüsü 2025-06-13 131727](https://github.com/user-attachments/assets/68b643f8-b79f-4798-b6ad-a64ac3d81d3f)
+#### Yeni Talep Ekranı
 
+![Ekran görüntüsü 2025-06-13 104151](https://github.com/user-attachments/assets/6792e21b-60e3-4f78-8a93-a9e669727818)
 
-<table>
-  <tr>
-    <td><img "![Ekran görüntüsü 2025-06-13 104151](https://github.com/user-attachments/assets/ecd31498-a2f3-4072-9d96-9da89ced305d)" width="300" alt="Yeni Talep"/></td>
-    <td><img src="screenshots/main-system/03-new-request-form.png" width="300" alt="Talep Güncelle"/></td>
-    <td><img src="screenshots/main-system/05-request-list.png" width="300" alt="Talep Listesi"/></td>
-  </tr>
-  <tr>
-    <td align="center">Ana Panel</td>
-    <td align="center">Yeni Talep Formu</td>
-    <td align="center">Talep Listesi</td>
-  </tr>
-</table>
+![Ekran görüntüsü 2025-06-13 131857](https://github.com/user-attachments/assets/1dd0ecd8-1027-4f9d-aaa8-3a3ac948082f)
+
+#### Talep güncelleme Ekranı
+
+![Ekran görüntüsü 2025-06-13 132021](https://github.com/user-attachments/assets/e2653ad9-f9ab-474c-8d31-2723128f4a26)
+
+#### Talep Listesi ekranı
+
+![Ekran görüntüsü 2025-06-13 132037](https://github.com/user-attachments/assets/f06074cb-2421-4134-9c67-d4f7e143ae74)
+
+![Ekran görüntüsü 2025-06-13 132050](https://github.com/user-attachments/assets/59618b7b-a949-4873-abbe-873ad7ef9252)
+
+#### Excel Export
+
+![Ekran görüntüsü 2025-06-13 132109](https://github.com/user-attachments/assets/9411b1ab-7fd3-4581-901e-e7c388832ef8)
+
+![Ekran görüntüsü 2025-06-13 132125](https://github.com/user-attachments/assets/60e64cce-92dc-4a05-8987-1cc514e39b29)
+
 
 ### Viewer Uygulaması
 
-<table>
-  <tr>
-    <td><img src="screenshots/viewer-app/02-main-view.png" width="300" alt="Ana Görünüm"/></td>
-    <td><img src="screenshots/viewer-app/03-search-filter.png" width="300" alt="Arama"/></td>
-    <td><img src="screenshots/viewer-app/04-request-details.png" width="300" alt="Detay"/></td>
-  </tr>
-  <tr>
-    <td align="center">Ana Görünüm</td>
-    <td align="center">Arama & Filtreleme</td>
-    <td align="center">Talep Detayları</td>
-  </tr>
-</table>
+
 
 ## 🎥 Demo
 ![proje](https://github.com/user-attachments/assets/ba34c781-a3a8-4bab-a12f-6fa106d4504b)
