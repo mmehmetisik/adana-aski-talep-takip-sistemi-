@@ -61,8 +61,7 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
 
 <table>
   <tr>
-    <td><img src="![Ekran görüntüsü 2025-06-13 104151](https://github.com/user-attachments/assets/ee239189-6590-4992-b6f5-6927b2bdf09f)
-"Yeni Talep"/></td>
+    <td><img src="![Ekran görüntüsü 2025-06-13 104151](https://github.com/user-attachments/assets/e775cdfb-48e0-424f-9cef-3a622f4c5261)" width="300" alt="Yeni Talep"/></td>
     <td><img src="screenshots/main-system/03-new-request-form.png" width="300" alt="Talep Güncelle"/></td>
     <td><img src="screenshots/main-system/05-request-list.png" width="300" alt="Talep Listesi"/></td>
   </tr>
