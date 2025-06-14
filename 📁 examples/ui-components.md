@@ -378,6 +378,309 @@ def durum_badge_olustur(parent, durum_text):
     return badge
 ```
 
+### Loading/Progress Göstergeleri
+### Animasyonlu Loading Ekranı
+
+```
+def loading_goster(parent, mesaj="Yükleniyor..."):
+    """
+    Animasyonlu loading ekranı gösterir.
+    """
+    # Loading frame
+    loading_frame = tk.Frame(parent, bg="white")
+    loading_frame.pack(fill=tk.BOTH, expand=True)
+    
+    # İç container
+    ic_container = tk.Frame(loading_frame, bg="white")
+    ic_container.pack(expand=True)
+    
+    # Animasyonlu spinner (basit versiyon)
+    spinner_frame = tk.Frame(ic_container, bg="white")
+    spinner_frame.pack()
+    
+    # Spinner karakterleri
+    spinner_chars = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+    spinner_index = [0]
+    
+    spinner_label = tk.Label(
+        spinner_frame,
+        text=spinner_chars[0],
+        font=("Segoe UI", 24),
+        bg="white",
+        fg="#3b82f6"
+    )
+    spinner_label.pack()
+    
+    # Loading metni
+    tk.Label(
+        ic_container,
+        text=mesaj,
+        font=("Segoe UI", 12),
+        bg="white",
+        fg="#1e293b"
+    ).pack(pady=(10, 0))
+    
+    # Animasyon fonksiyonu
+    def animate_spinner():
+        spinner_index[0] = (spinner_index[0] + 1) % len(spinner_chars)
+        spinner_label.config(text=spinner_chars[spinner_index[0]])
+        parent.after(100, animate_spinner)
+    
+    # Animasyonu başlat
+    animate_spinner()
+    
+    return loading_frame
+```
+
+### Modal Dialog
+#### Modern Popup Pencere
+
+```
+def modern_popup_goster(parent, baslik, icerik, tip="bilgi"):
+    """
+    Modern görünümlü popup pencere gösterir.
+    """
+    # Popup pencere
+    popup = tk.Toplevel(parent)
+    popup.title(baslik)
+    popup.geometry("400x300")
+    popup.configure(bg="white")
+    popup.resizable(False, False)
+    
+    # Pencereyi ortala
+    popup.update_idletasks()
+    x = (popup.winfo_screenwidth() - 400) // 2
+    y = (popup.winfo_screenheight() - 300) // 2
+    popup.geometry(f"400x300+{x}+{y}")
+    
+    # Modal yap
+    popup.transient(parent)
+    popup.grab_set()
+    
+    # Renk şeması
+    renkler = {
+        "bilgi": {"ana": "#3b82f6", "ikon": "ℹ️"},
+        "basari": {"ana": "#10b981", "ikon": "✅"},
+        "uyari": {"ana": "#f59e0b", "ikon": "⚠️"},
+        "hata": {"ana": "#ef4444", "ikon": "❌"}
+    }
+    
+    renk_info = renkler.get(tip, renkler["bilgi"])
+    
+    # Üst renkli bar
+    ust_bar = tk.Frame(popup, bg=renk_info["ana"], height=60)
+    ust_bar.pack(fill=tk.X)
+    ust_bar.pack_propagate(False)
+    
+    # İkon ve başlık
+    tk.Label(
+        ust_bar,
+        text=f"{renk_info['ikon']} {baslik}",
+        font=("Segoe UI", 16, "bold"),
+        bg=renk_info["ana"],
+        fg="white"
+    ).pack(expand=True)
+    
+    # İçerik
+    icerik_frame = tk.Frame(popup, bg="white", padx=30, pady=20)
+    icerik_frame.pack(fill=tk.BOTH, expand=True)
+    
+    tk.Label(
+        icerik_frame,
+        text=icerik,
+        font=("Segoe UI", 11),
+        bg="white",
+        fg="#374151",
+        wraplength=340,
+        justify=tk.LEFT
+    ).pack()
+    
+    # Tamam butonu
+    tk.Button(
+        icerik_frame,
+        text="Tamam",
+        font=("Segoe UI", 10, "bold"),
+        bg=renk_info["ana"],
+        fg="white",
+        relief=tk.FLAT,
+        padx=30,
+        pady=10,
+        cursor="hand2",
+        command=popup.destroy
+    ).pack(side=tk.BOTTOM, pady=(20, 0))
+    
+    return popup
+```
+
+### Tablo/Liste Görünümleri
+### Modern Treeview Stili
+
+```
+def modern_treeview_olustur(parent):
+    """
+    Özelleştirilmiş modern treeview oluşturur.
+    """
+    # Style tanımlamaları
+    style = ttk.Style()
+    style.theme_use("clam")
+    
+    # Treeview stilleri
+    style.configure("Treeview",
+        background="white",
+        foreground="#1e293b",
+        rowheight=40,
+        fieldbackground="white",
+        borderwidth=0,
+        font=("Segoe UI", 10)
+    )
+    
+    style.configure("Treeview.Heading",
+        background="#f8fafc",
+        foreground="#1e293b",
+        relief="flat",
+        font=("Segoe UI", 10, "bold")
+    )
+    
+    style.map("Treeview",
+        background=[("selected", "#e0f2fe")],
+        foreground=[("selected", "#0c4a6e")]
+    )
+    
+    # Treeview oluştur
+    columns = ("Talep No", "İş Adı", "Durum", "Tarih")
+    tree = ttk.Treeview(parent, columns=columns, show="headings", style="Treeview")
+    
+    # Sütun başlıkları
+    for col in columns:
+        tree.heading(col, text=col)
+        tree.column(col, anchor="center")
+    
+    # Örnek veri ekleme
+    tree.insert("", "end", values=("2025/001", "Pompa Bakımı", "Beklemede", "14.06.2025"))
+    tree.insert("", "end", values=("2025/002", "Klor Pompası", "Onaylandı", "14.06.2025"))
+    
+    # Scrollbar
+    scrollbar = ttk.Scrollbar(parent, orient="vertical", command=tree.yview)
+    tree.configure(yscrollcommand=scrollbar.set)
+    
+    # Pack
+    tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+    
+    return tree
+```
+### Animasyon Örnekleri
+### Yumuşak Geçiş Animasyonu
+
+```
+def fade_in_animasyon(widget, adim=0.1):
+    """
+    Widget'ı yumuşak bir şekilde görünür yapar.
+    """
+    alpha = 0.0
+    
+    def fade_step():
+        nonlocal alpha
+        if alpha < 1.0:
+            alpha += adim
+            widget.attributes("-alpha", alpha)
+            widget.after(50, fade_step)
+    
+    widget.attributes("-alpha", 0.0)
+    fade_step()
+```
+
+### Logo Animasyonu
+
+```
+def logo_pulse_animasyon(logo_label):
+    """
+    Logo için pulse (nabız) efekti oluşturur.
+    """
+    import math
+    
+    frame = [0]
+    
+    def animate():
+        frame[0] += 0.1
+        scale = 1.0 + 0.05 * math.sin(frame[0])
+        
+        # Font boyutunu değiştir
+        new_size = int(48 * scale)
+        logo_label.config(font=("Arial", new_size))
+        
+        # Animasyonu devam ettir
+        logo_label.after(50, animate)
+    
+    animate()
+```
+### Responsive Layout
+#### Otomatik Boyutlandırma
+
+```
+def responsive_grid_olustur(parent, eleman_sayisi):
+    """
+    Pencere boyutuna göre otomatik grid layout oluşturur.
+    """
+    def pencere_boyut_degisti(event=None):
+        genislik = parent.winfo_width()
+        
+        # Genişliğe göre sütun sayısını belirle
+        if genislik < 600:
+            sutun_sayisi = 1
+        elif genislik < 900:
+            sutun_sayisi = 2
+        elif genislik < 1200:
+            sutun_sayisi = 3
+        else:
+            sutun_sayisi = 4
+        
+        # Elemanları yeniden yerleştir
+        for i, eleman in enumerate(parent.winfo_children()):
+            row = i // sutun_sayisi
+            col = i % sutun_sayisi
+            eleman.grid(row=row, column=col, padx=10, pady=10, sticky="ew")
+        
+        # Sütunları eşit genişlikte yap
+        for i in range(sutun_sayisi):
+            parent.columnconfigure(i, weight=1)
+    
+    # Pencere boyut değişikliğini dinle
+    parent.bind("<Configure>", pencere_boyut_degisti)
+    
+    # İlk yerleştirme
+    pencere_boyut_degisti()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
