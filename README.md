@@ -19,6 +19,7 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
 
 ## 🏗️ Sistem Mimarisi
 
+```
 ┌─────────────────────────────────┐     ┌─────────────────────────────────┐
 │      ANA YÖNETİM SİSTEMİ        │     │      VIEWER UYGULAMASI          │
 │                                 │     │                                 │
@@ -41,6 +42,7 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
             │ Email Server │
             │    (SMTP)    │
             └──────────────┘
+```
 
 ### 📱 İki Uygulama Yaklaşımı
 
