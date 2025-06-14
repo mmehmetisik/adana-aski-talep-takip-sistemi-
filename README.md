@@ -119,9 +119,11 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
 
 Sistem, her talep oluşturulduğunda ve güncellendiğinde otomatik olarak ilgili kişilere profesyonel HTML email bildirimleri gönderir.
 
-<p align="center">
-  <img src="screenshots/main-system/06-email-notification.png" width="400" alt="Email Bildirimi"/>
-</p>
+![Ekran görüntüsü 2025-06-13 131651](https://github.com/user-attachments/assets/d31f5bb8-68c1-4b73-9a94-81b34b580b75)
+
+![Ekran görüntüsü 2025-06-13 131727](https://github.com/user-attachments/assets/dca1de37-885f-4a45-b81c-02b4f67651c3)
+
+
 
 ## 🚀 Öne Çıkan Özellikler
 
