@@ -1,8 +1,9 @@
 # 🏢 ADANA ASKİ Talep Takip Sistemi
 
-<p align="center">
-  <img src="screenshots/main-system/01-login-screen.png" width="400" alt="Giriş Ekranı"/>
-</p>
+
+
+![Giriş Ekranı](https://github.com/user-attachments/assets/07d8f13d-ddc6-4180-becd-82c7591381ab)
+
 
 ## 📋 Proje Hakkında
 
