@@ -125,17 +125,9 @@ Sistem, her talep oluşturulduğunda ve güncellendiğinde otomatik olarak ilgil
 - Gradient efektler ve animasyonlar
 - Kullanıcı dostu form elemanları
 
-## 📚 Dokümantasyon
-
-Detaylı dokümantasyon için:
-- [Sistem Mimarisi](docs/architecture.md)
-- [Özellik Listesi](docs/features.md)
-- [Kullanım Kılavuzu](docs/user-guide.md)
-- [Teknoloji Stack'i](docs/technology-stack.md)
-
 ## 👥 Geliştirici
 
-**Burak Mete Öztürk**  
+**Mehmet IŞIK**  
 ADANA ASKİ - Yazılım Geliştirici
 
 ## 📄 Lisans
