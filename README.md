@@ -164,13 +164,13 @@ SMTP - Email gönderimi
 ## ❓ Sıkça Sorulan Sorular
 
 **S: Viewer uygulaması internet olmadan çalışır mı?**
-**C: Evet, son senkronize edilen verilerle offline çalışabilir.
+**C: Evet, son senkronize edilen verilerle offline çalışabilir.**
 
 **S: Kaç kullanıcı aynı anda sistemi kullanabilir?**
-**C: Ana sistemde sınırsız, viewer uygulaması salt okunur olduğu için performans sorunu yaşanmaz.
+**C: Ana sistemde sınırsız, viewer uygulaması salt okunur olduğu için performans sorunu yaşanmaz.**
 
 **S: Email bildirimleri zorunlu mu?**
-**C: Hayır, konfigürasyondan devre dışı bırakılabilir.
+**C: Hayır, konfigürasyondan devre dışı bırakılabilir.**
 
 ## 👥 Geliştirici
 
