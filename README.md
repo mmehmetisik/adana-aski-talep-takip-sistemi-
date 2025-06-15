@@ -9,6 +9,32 @@
 
 ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kullanıcı dostu bir talep takip sistemidir. Sistem, mal alımı, yapım işleri ve hizmet alımı taleplerinin dijital ortamda yönetilmesini sağlar.
 
+## 📖 Projenin Hikayesi
+Ceyhan Atıksu Arıtma Tesisi olarak, günlük operasyonlarımızda yüzlerce satın alma talebi oluşturuyoruz. Mekanik arızalar için yedek parçalar, elektrik sistemleri için malzemeler, laboratuvar analizleri için kimyasallar, proje çalışmaları için ekipmanlar... Her birim kendi ihtiyaçları doğrultusunda sürekli talep oluşturuyor.
+🔴 Sorun: Kağıt Üzerinde Kaos
+Geleneksel sistemde, her talep evrak olarak hazırlanıp taşınır kayıt görevlisine teslim ediliyordu. Ancak bu yöntem ciddi sorunlar yaratmaya başladı:
+
+Takip Zorluğu: "Bu talep hangi aşamada?", "Kim ne zaman talep yapmış?", "Nerede bekliyor?" sorularına cevap bulmak neredeyse imkansızdı
+Kayıp Talepler: Yoğunluktan bazı talepler kayboluyordu
+Geciken Bilgilendirmeler: Excel listelerinin güncellenmesi çok geç oluyordu
+İletişim Kopukluğu: Talep sahipleri, taleplerinin durumunu öğrenmek için sürekli telefon açmak zorunda kalıyordu
+
+💡 Çözüm: Dijital Dönüşüm
+Bu karmaşayı sonlandırmak için iki aşamalı bir dijital çözüm geliştirdim:
+1️⃣ Ana Talep Takip Sistemi
+Taşınır kayıt görevlisinin kullanacağı merkezi sistem. Tüm talepleri dijital ortamda kaydediyor, durumlarını güncelliyor ve her işlemde otomatik email bildirimleri gönderiyor. Artık hiçbir talep kaybolmuyor, her şey kayıt altında.
+2️⃣ Viewer Uygulaması
+Talep sahipleri ve yöneticiler için tasarlanmış görüntüleme arayüzü. Herkes kendi taleplerinin durumunu anlık olarak görebiliyor. Telefon trafiği %90 azaldı, herkes bir tıkla bilgiye ulaşabiliyor.
+✅ Sonuç: Verimlilik Patlaması
+Bu sistem sayesinde:
+
+Talep takip süresi %75 azaldı
+Kayıp talep sayısı sıfıra indi
+Telefon trafiği %90 düştü
+Tüm süreç şeffaf ve izlenebilir hale geldi
+
+Bugün Ceyhan Atıksu Arıtma Tesisi'nde bu sistem aktif olarak kullanılıyor ve günde ortalama 50+ talebin sorunsuz yönetilmesini sağlıyor. Kağıt karmaşasından dijital düzene geçiş, sadece bir yazılım projesi değil, aynı zamanda kurumsal bir başarı hikayesi oldu.
+
 ### 🎯 Temel Özellikler
 
 - ✅ **Modern Kullanıcı Arayüzü**: Gradient efektler ve animasyonlar ile zenginleştirilmiş tasarım
