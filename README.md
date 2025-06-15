@@ -21,10 +21,13 @@ Geciken Bilgilendirmeler: Excel listelerinin güncellenmesi çok geç oluyordu
 
 💡 Çözüm: Dijital Dönüşüm
 Bu karmaşayı sonlandırmak için iki aşamalı bir dijital çözüm geliştirdim:
+
 1️⃣ Ana Talep Takip Sistemi
 Taşınır kayıt görevlisinin kullanacağı merkezi sistem. Tüm talepleri dijital ortamda kaydediyor, durumlarını güncelliyor ve her işlemde otomatik email bildirimleri gönderiyor. Artık hiçbir talep kaybolmuyor, her şey kayıt altında.
+
 2️⃣ Viewer Uygulaması
 Talep sahipleri ve yöneticiler için tasarlanmış görüntüleme arayüzü. Herkes kendi taleplerinin durumunu anlık olarak görebiliyor. Telefon trafiği %90 azaldı, herkes bir tıkla bilgiye ulaşabiliyor.
+
 ✅ Sonuç: Verimlilik Patlaması
 Bu sistem sayesinde:
 
