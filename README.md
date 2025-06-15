@@ -1,10 +1,5 @@
 # 🏢 ADANA ASKİ Talep Takip Sistemi
 
-
-
-![Giriş Ekranı](https://github.com/user-attachments/assets/07d8f13d-ddc6-4180-becd-82c7591381ab)
-
-
 ## 📋 Proje Hakkında
 
 ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kullanıcı dostu bir talep takip sistemidir. Sistem, mal alımı, yapım işleri ve hizmet alımı taleplerinin dijital ortamda yönetilmesini sağlar.
@@ -110,6 +105,8 @@ Bugün Ceyhan Atıksu Arıtma Tesisi'nde bu sistem aktif olarak kullanılıyor v
 ## 📸 Ekran Görüntüleri
 
 ### Ana Yönetim Sistemi
+
+![Giriş Ekranı](https://github.com/user-attachments/assets/07d8f13d-ddc6-4180-becd-82c7591381ab)
 
 #### Yeni Talep Ekranı
 
