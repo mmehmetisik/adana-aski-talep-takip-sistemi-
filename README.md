@@ -11,13 +11,14 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
 
 ## 📖 Projenin Hikayesi
 Ceyhan Atıksu Arıtma Tesisi olarak, günlük operasyonlarımızda yüzlerce satın alma talebi oluşturuyoruz. Mekanik arızalar için yedek parçalar, elektrik sistemleri için malzemeler, laboratuvar analizleri için kimyasallar, proje çalışmaları için ekipmanlar... Her birim kendi ihtiyaçları doğrultusunda sürekli talep oluşturuyor.
+
 🔴 Sorun: Kağıt Üzerinde Kaos
 Geleneksel sistemde, her talep evrak olarak hazırlanıp taşınır kayıt görevlisine teslim ediliyordu. Ancak bu yöntem ciddi sorunlar yaratmaya başladı:
 
-Takip Zorluğu: "Bu talep hangi aşamada?", "Kim ne zaman talep yapmış?", "Nerede bekliyor?" sorularına cevap bulmak neredeyse imkansızdı
-Kayıp Talepler: Yoğunluktan bazı talepler kayboluyordu
-Geciken Bilgilendirmeler: Excel listelerinin güncellenmesi çok geç oluyordu
-İletişim Kopukluğu: Talep sahipleri, taleplerinin durumunu öğrenmek için sürekli telefon açmak zorunda kalıyordu
+- Takip Zorluğu: "Bu talep hangi aşamada?", "Kim ne zaman talep yapmış?", "Nerede bekliyor?" sorularına cevap bulmak neredeyse imkansızdı
+- Kayıp Talepler: Yoğunluktan bazı talepler kayboluyordu
+- Geciken Bilgilendirmeler: Excel listelerinin güncellenmesi çok geç oluyordu
+- İletişim Kopukluğu: Talep sahipleri, taleplerinin durumunu öğrenmek için sürekli telefon açmak zorunda kalıyordu
 
 💡 Çözüm: Dijital Dönüşüm
 Bu karmaşayı sonlandırmak için iki aşamalı bir dijital çözüm geliştirdim:
