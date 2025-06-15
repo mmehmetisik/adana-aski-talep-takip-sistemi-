@@ -107,9 +107,14 @@ ADANA ASKİ Ceyhan Atıksu Arıtma Tesisi için geliştirilmiş, modern ve kulla
 ### Viewer Uygulaması
 
 
-
 ## 🎥 Demo
 ![proje](https://github.com/user-attachments/assets/ba34c781-a3a8-4bab-a12f-6fa106d4504b)
+
+![Ekran görüntüsü 2025-06-15 145008](https://github.com/user-attachments/assets/ef200781-af53-4e09-97c8-3d62f10abea0)
+
+![Ekran görüntüsü 2025-06-15 145021](https://github.com/user-attachments/assets/de67c05a-84df-4c98-a14b-d0db36fa7cc2)
+
+![Ekran görüntüsü 2025-06-15 145040](https://github.com/user-attachments/assets/c6df1881-a15b-4520-a50d-c79f8aac28c9)
 
 
 <p align="center">
